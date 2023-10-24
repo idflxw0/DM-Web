@@ -5,7 +5,7 @@ let maxTentatives = 3; // réduction du nombre de soumissions à maxTentatives
 let maxTouches = 6; // nombre de chiffres du code à saisir
 let dimCarre = 4; // spécifie la dimension matricielle du clavier carré
 
-// Quelques références (jQuery) sur les balises de la page
+// Queues références (jQuery) sur les balises de la page
 let $allcases; // référence à toutes les balises <td> du clavier HTML (id="clavier")
 let $activecases; // référence à celles qui ont class="activecase"
 let $icode; // référence à la balise affichant le code saisi <input name="code">
