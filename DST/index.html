@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http_code.jquery.com_jquery-3.6.0.js"></script>
+    <script src = "script.js"></script>
+</head>
+<body>
+    <h3>Jouez avec l'ordinateur :</h3>
+    <h4 id="message">Faites votre choix en cliquant sur une image </h4>
+
+    <table class="choix">
+        <tr><th>PIERRE</th><th>FEUILLE</th><th>CISEAUX</th></tr>
+        <tr>
+            <td><img class="image" id="0" src="pierre.jpg"/></td>
+            <td><img class="image" id="1" src="feuille.jpg"/></td>
+            <td><img class="image" id="2" src="ciseau.jpg"/></td>
+        </tr>
+    </table><br/>
+
+    <table class="jeu">
+        <tr><th>HUMAIN</th><th>ORDI</th></tr>
+        <tr>
+            <td><img class="image" id="humain" src=""/></td>
+            <td><img class="image" id="ordinateur" src=""/></td>
+        </tr>
+        <tr>
+            <td><button id="annuler">annuler</button></td>
+            <td><button id="jouer">jouer</button></td>
+        </tr>
+    </table>
+
+    <div>
+        <div id="score">score de la manche : 0-0</div>
+        <div id="manche">manches gagnées : 0/0</div>
+        <button id="rejouer" style="display:none">Rejouer une partie</button><br/>
+    </div>
+
+    <div id="ajax"> <!--pour la question Q2 -->
+        <button id="sauverManches">Sauver les manches gagnées</button><br/>
+        <form id="sauver" style="display:none">
+            <input name="appid" value="acd-001"/>
+        </form>
+    </div>
+</body>
+</html>

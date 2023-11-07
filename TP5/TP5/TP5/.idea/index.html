@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <meta charset="UTF-8">
+    <script src="test.js" defer></script>
+    <link rel="stylesheet" href="test.css">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Draggable - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+  #draggable, #draggable2, #draggable3,#draggable4,#draggable5,#draggable6 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 500px; height: 500px; padding: 0.5em; float: left; margin: 10px; }
+  </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+  $( function() {
+    $( "#draggable" ).draggable({ revert: "valid" });
+    $( "#draggable2" ).draggable({ revert: "valid" });
+    $( "#draggable3" ).draggable({ revert: "valid" });
+    $( "#draggable4" ).draggable({ revert: "valid" });
+    $( "#draggable5" ).draggable({ revert: "valid" });
+    $( "#draggable6" ).draggable({ revert: "valid" });
+
+    $( "#droppable" ).droppable({
+      classes: {
+        "ui-droppable-active": "ui-state-active",
+        "ui-droppable-hover": "ui-state-hover"
+      },
+      drop: function( event, ui ) {
+            // Obtenez les coordonnées de la position déposée
+            var latlng = map.mouseEventToLatLng(event);
+
+            // Définissez la vue de la carte aux coordonnées déposées
+            map.setView(latlng, 13);
+
+            // Mettez à jour le contenu du popup avec les coordonnées
+            popup
+                .setLatLng(latlng)
+                .setContent("Position GPS: " + latlng.toString())
+                .openOn(map);
+        }
+    });
+  } );
+  </script>
+</head>
+<body>
+
+    <div id="draggable" class="ui-widget-content">
+    <p>france</p>
+</div>
+
+    <div id="draggable2" class="ui-widget-content">
+        <p>belgique</p>
+    </div>
+
+    <div id="draggable3" class="ui-widget-content">
+        <p>italie</p>
+    </div>
+    <div id="draggable4" class="ui-widget-content">
+        <p>canada</p>
+    </div>
+    <div id="draggable5" class="ui-widget-content">
+        <p>japon</p>
+    </div>
+    <div id="draggable6" class="ui-widget-content">
+        <p>position gps</p>
+    </div>
+
+
+
+<div id="droppable" class="ui-widget-header">
+    <div id="map"></div>
+    <p>Drop me here</p>
+</div>
+
+</body>
+</html>

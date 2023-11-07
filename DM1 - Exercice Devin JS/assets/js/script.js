@@ -5,7 +5,7 @@ const genRandom = () => {
     return Math.floor(Math.random() * 100) + 1;
 }
 
-let randNumber = genRandom();
+let randNumber = "https://www.random.org/clients/http/api/" //genRandom();
 const button = document.getElementById("valider");
 let input = document.getElementById("input");
 
@@ -75,3 +75,4 @@ const changeColor = (current_state) => {
 }
 
 button.addEventListener("click", guess);
+resetGame();

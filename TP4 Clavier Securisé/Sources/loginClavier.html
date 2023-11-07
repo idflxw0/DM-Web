@@ -6,21 +6,19 @@
 		 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 		<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-
+		<script src="jquery-3.7.1.min.js"></script>
+		<script src="script.js"></script>
 		<style >
 		table {border:0.2em black solid; margin-left:3em; cursor:pointer}
-		.case {width:12; height:12;background-color:grey}
+		.case {width:12px; height:24px;background-color:grey}
 		.activecase {background-color:white}
 		input {height:1.5em;width:18em; display:block}
 		input[name=code] {disabled:disabled}
 		</style>
 		<script>
-
-
 		</script>
 <body>
 		<h2> Login numérique</h2>
-	
 		<h3> Clavier de saisie de votre code <br/>
 		(3 tentatives maximum)</h3>
 		<table id="clavier">
@@ -44,7 +42,6 @@
 					<td class="case activecase">3</td>
 					<td class="case activecase">4</td>
 				</tr>
-
 			</table>
 		<form method="post" action=""> 
 			<div>
